@@ -7,12 +7,7 @@ async function invokeReact() {
     ...reactTemplate,
     pkg: {
       dependencies: {
-        react: '^17.0.2',
-        '@babel/preset-react': '^7.16.7',
-        'normalize.css': '^8.0.1',
-        'prop-types': '^15.8.1',
-        'react-dom': '^17.0.2',
-        'web-vitals': '^2.1.4',
+        "vue": "^3.2.25"
       },
     },
   };
