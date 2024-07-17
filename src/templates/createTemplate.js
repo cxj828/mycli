@@ -35,14 +35,14 @@ const loadTemplates = async (features, targetDir) => {
 
   const templates = await Promise.all(promises);
 
-  console.log('***************');
+  // console.log('***************');
 
   // console.log(targetDir);
 
   // console.log(templates);
 
   templates.forEach(({ pkg, ...rest }) => {
-    console.log(rest);
+    // console.log(rest);
     if (pkg) mergePackageJSON(result.pkg, pkg);
     if (rest) result = { ...result, ...rest };
   });

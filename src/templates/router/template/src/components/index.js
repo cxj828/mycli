@@ -1,1 +1,1 @@
-/* React components */
+/* vue components */

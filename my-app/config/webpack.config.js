@@ -85,7 +85,7 @@ module.exports = {
 
   plugins: [
     new HtmlWebpackPlugin({
-      title: 'React App',
+      title: 'vue App',
       template: path.resolve(__dirname, '../public/index.html'),
     }),
     new MiniCssExtractPlugin({

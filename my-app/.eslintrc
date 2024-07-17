@@ -14,6 +14,10 @@
     "global": true,
     "globalThis": true
   },
+  "plugins": [
+    "react",
+    "react-hooks"
+  ],
   "parser": "@babel/eslint-parser",
   "parserOptions": {
     "babelOptions": {
@@ -49,6 +53,15 @@
         "ts": "never",
         "tsx": "never"
       }
-    ]
+    ],
+    "react/jsx-uses-react": "off",
+    "react/react-in-jsx-scope": "off",
+    "react-hooks/rules-of-hooks": "error",
+    "react-hooks/exhaustive-deps": "warn"
+  },
+  "settings": {
+    "react": {
+      "version": "detect"
+    }
   }
 }

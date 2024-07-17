@@ -15,7 +15,6 @@ async function invokeWebPack() {
         '@babel/core': '^7.15.5',
         '@babel/preset-env': '^7.16.11',
         'babel-loader': '^8.2.3',
-        'babel-preset-react-app': '^10.0.1',
         'css-loader': '^6.6.0',
         'css-minimizer-webpack-plugin': '^3.4.1',
         'html-loader': '^3.1.0',

@@ -33,12 +33,12 @@ const linter = {
  */
 const getFormatFeatures = (features) => {
   const result = features.flat();
-  const hasReact = hasVueFeature(features);
+  const hasVue = hasVueFeature(features);
   const hasRouter = hasRouterFeature(features);
 
-  if (hasRouter && !hasReact) {
-    logWarnings(['If React router is selected, React feature needs to be selected']);
-    result.push(featuresEnum.react);
+  if (hasRouter && !hasVue) {
+    logWarnings(['If vue router is selected, vue feature needs to be selected']);
+    result.push(featuresEnum.vue);
   }
 
   return result;

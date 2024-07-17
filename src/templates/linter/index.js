@@ -3,8 +3,8 @@ const { hasVueFeature } = require('../../utils');
 
 const { configFiles } = featuresEnum;
 
-const getEslintConfig = ({ hasReact }) => {
-  const { plugins, rules, settings } = hasReact
+const getEslintConfig = ({ hasVue }) => {
+  const { plugins, rules, settings } = hasVue
     ? {
         plugins: ['react', 'react-hooks'],
         rules: {
