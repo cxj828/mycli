@@ -8,7 +8,7 @@ const emojis = {
 
 const featuresEnum = {
   Vue: ['vue', 'webpack'],
-  reactRouter: 'router',
+  vueRouter: 'router',
   linter: 'linter',
   configFiles: {
     linter: {

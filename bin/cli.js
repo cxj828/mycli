@@ -17,7 +17,7 @@ program.version(`create-cli: ${version}`, '-v, --version', 'output the current p
 program
   .command('create <app-name>')
   .alias('c')
-  .description('Create a new pri project.')
+  .description('Create a new project.')
   .option('-f, --force', 'Overwrite target directory if it exists')
   .action((name, options) => {
     if (minimist(process.argv.slice(3))._.length > 1) {

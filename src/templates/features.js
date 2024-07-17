@@ -11,12 +11,12 @@ const Vue = {
   link: 'https://cn.vuejs.org/',
 };
 
-const reactRouter = {
-  name: 'React Router',
-  value: featuresEnum.reactRouter,
+const vueRouter = {
+  name: 'vue Router',
+  value: featuresEnum.vueRouter,
   short: 'Router',
-  description: 'React Router is a lightweight, fully-featured routing library for the React JavaScript library',
-  link: 'https://reactrouter.com/',
+  description: 'vue Router is a lightweight, fully-featured routing library for the vue JavaScript library',
+  link: 'https://router.vuejs.org/',
 };
 
 const linter = {
@@ -50,7 +50,7 @@ const getFormatFeatures = (features) => {
 const featuresPrompt = async () => {
   const { features = [] } = await prompt([
     {
-      choices: [Vue, reactRouter, linter],
+      choices: [Vue, vueRouter, linter],
       name: 'features',
       type: 'checkbox',
       message: chalk.cyan('Check the features needed for your project:'),

@@ -51,7 +51,7 @@ const installDependencies = (targetDir) => {
     });
 
     child.on('close', (code) => {
-      const msg = `${command} ${args.join(' ')}`;
+      const msg = `${command} ${args.join(' ***')}`;
       if (code !== 0) reject(new Error(`Command failed: ${msg}`));
       resolve(`Command success: ${msg}`);
     });
@@ -69,7 +69,6 @@ async function createProject(name, targetDir) {
   startLog(name, targetDir);
 
   await writePackageJson(pkg, targetDir);
-  await initGitRepository(targetDir);
   await createTemplate(targetDir, { features, pkg });
   await installDependencies(targetDir);
 }

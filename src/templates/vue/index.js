@@ -1,10 +1,10 @@
 const { getFilesFormDir } = require('../../utils');
 
-async function invokeReact() {
-  const reactTemplate = await getFilesFormDir(__dirname);
+async function invokeVue() {
+  const vueTemplate = await getFilesFormDir(__dirname);
 
   return {
-    ...reactTemplate,
+    ...vueTemplate,
     pkg: {
       dependencies: {
         "vue": "^3.2.25"
@@ -13,4 +13,4 @@ async function invokeReact() {
   };
 }
 
-module.exports = invokeReact;
+module.exports = invokeVue;
