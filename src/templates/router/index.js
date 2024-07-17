@@ -1,10 +1,10 @@
-// const { getFilesFormDir } = require('../../utils');
+const { getFilesFormDir } = require('../../utils');
 
 async function invokeRouter() {
-//   const routerTemplate = await getFilesFormDir(__dirname);
+  const routerTemplate = await getFilesFormDir(__dirname);
 
   return {
-    // ...routerTemplate,
+    ...routerTemplate,
     pkg: {
       dependencies: {
         "vue-router": "4.3.0",
