@@ -2,7 +2,7 @@ const execa = require('execa');
 const fs = require('fs-extra');
 const globby = require('globby');
 const Handlebars = require('handlebars');
-const isBinaryPath = require('is-binary-path');
+const isBinaryPath = require('is-binary-path');//文件路径检查
 const path = require('path');
 const { execSync } = require('child_process');
 
@@ -55,17 +55,24 @@ const renderFile = async (filePath) => {
  */
 async function getFilesFormDir(dir) {
   const promises = [];
+  //路径拼接
   const cwd = path.resolve(dir, 'template');
-  const files = await globby(['**/*'], { cwd });
 
+
+  //Node.js globby文件匹配库 匹配所有
+  const files = await globby(['**/*'], { cwd });
   for (let i = 0, len = files.length; i < len; i += 1) {
     const file = files[i];
     const targetPath = path.resolve(cwd, file);
     promises.push(renderFile(targetPath));
   }
+  
 
   return (await Promise.all(promises)).reduce((acc, cur, i) => {
     acc[files[i]] = cur;
+  //   console.log('**********')
+  // console.log(acc)
+  // console.log(cur)
     return acc;
   }, {});
 }
