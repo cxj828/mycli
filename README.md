@@ -1,6 +1,6 @@
-# pri-cli
+# my-cli
 
-A cli tool that integrates many modern front-end solutions
+自定义前端脚手架，待完善
 
 1. 添加 jsconfig.json
 2. 配置 webpack resolve extensions
