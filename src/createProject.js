@@ -29,10 +29,10 @@ const writePackageJson = async (pkg, targetDir) => {
  * @param {string} targetDir
  */
 const initGitRepository = async (targetDir) => {
-  if (hasGit()) {
-    logInfos(['Initializing the git repository...'], emojis.recycle);
-    await runCommand(targetDir, 'git', ['init']);
-  }
+  // if (hasGit()) {
+  //   logInfos(['Initializing the git repository...'], emojis.recycle);
+  //   await runCommand(targetDir, 'git', ['init']);
+  // }
 };
 
 /**
